@@ -29,6 +29,7 @@ public class Obstacle : MonoBehaviour
             currentRotateSpeed = _minRotateSpeed + (_maxRotateSpeed - _minRotateSpeed) * 0.1f * Random.RandomRange(0, 11);
             rotateTime = _minRotateSpeed + (_maxRotateSpeed - _minRotateSpeed) * 0.1f * Random.RandomRange(0, 11);
             currentRotateSpeed *= Random.Range(0, 2) == 0 ? 1f : -1f;
+            Debug.Log(currentRotateSpeed);
         }
     }
 
