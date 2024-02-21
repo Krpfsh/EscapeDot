@@ -1,4 +1,5 @@
 using UnityEngine;
+using YG;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         }
         set
         {
+            YandexGame.NewLeaderboardScores("LiderboardDot", value);
             PlayerPrefs.SetInt(highScoreKey, value);
         }
     }
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
     }
 
     private const string MainMenu = "MainMenu";
-    private const string Gameplay = "Game";
+    private const string Gameplay = "Gameplay";
 
     public void GotoMainMenu()
     {

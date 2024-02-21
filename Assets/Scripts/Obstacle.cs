@@ -12,8 +12,8 @@ public class Obstacle : MonoBehaviour
     private void Awake()
     {
         currentRotateTime = 0f;
-        currentRotateSpeed = _minRotateSpeed + (_maxRotateSpeed - _minRotateSpeed) * 0.1f * Random.Range(0, 11);
-        rotateTime = _minRotateTime + (_maxRotateTime - _minRotateTime) * 0.1f * Random.Range(0, 11);
+        currentRotateSpeed = _minRotateSpeed + (_maxRotateSpeed - _minRotateSpeed) * 0.1f * Random.Range(0,11);
+        rotateTime = _minRotateTime + (_maxRotateTime - _minRotateTime) * 0.1f * Random.Range(0,11);
         currentRotateSpeed *= Random.Range(0, 2) == 0 ? 1f : -1f;
     }
 
@@ -21,7 +21,7 @@ public class Obstacle : MonoBehaviour
     {
         currentRotateTime += Time.deltaTime;
 
-        if (currentRotateTime > rotateTime)
+        if(currentRotateTime > rotateTime)
         {
             currentRotateTime = 0f;
             currentRotateSpeed = _minRotateSpeed + (_maxRotateSpeed - _minRotateSpeed) * 0.1f * Random.Range(0, 11);

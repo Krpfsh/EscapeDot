@@ -42,7 +42,7 @@ public class MainMenuManager : MonoBehaviour
         }
         else
         {
-            _newBestText.gameObject.SetActive(false);
+            _newBestText.gameObject.SetActive(true);
         }
 
         _bestScoreText.text = GameManager.Instance.HighScore.ToString();
